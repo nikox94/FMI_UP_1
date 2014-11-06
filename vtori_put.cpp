@@ -28,17 +28,28 @@ switch problem:
   //Zadacha 2
   int p;
   cin>>p;
-  for(int i=2;i<=p/2;++p)
+  for(int i=2;i<=p/2;p+=2)
     if(p%i==0)
       cout<<"Prosto"<<endl;
     else
       cout<<"Sustavno"<<endl;
   break;
   case 3:
-  //Zadacha 3
-  int c;
+  //Zadacha 3 + 4
+  int c,n;
+  cout<<"Vuvedi broi cifri na chisoto:"<<endl;
+  cin>>n;
+  cout<<"Vuvedi chisloto:"<<endl;
   cin>>c;
-  
+  std::stack<int> digits_stack;
+  while(n!=0){
+    digits_stack.push(c%10);
+    c/=10; --n;
+  }
+  while(!digits_stack.empty()){
+    cout<<digits_stack.top()<<endl;
+    digits_stack.pop();
+  }
   
   default:
   cout<<"Have a nice day! :-)"<<endl;
