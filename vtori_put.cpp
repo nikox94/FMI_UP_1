@@ -50,7 +50,13 @@ switch problem:
     cout<<digits_stack.top()<<endl;
     digits_stack.pop();
   }
+  break;
+  case4:
+  //Zadacha 4
   
+  
+  
+  break;
   default:
   cout<<"Have a nice day! :-)"<<endl;
   
